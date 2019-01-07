@@ -1,6 +1,4 @@
-
 // Delete occurances of an element if it occurs more than once
-
 function deleteNth(arr,n){
     if (!arr) { return null; }
     if ( n < 1) { return []; }
@@ -19,7 +17,6 @@ function deleteNth(arr,n){
 }
 
 // RGB to HEX conversion
-
 function rgb(r, g, b){
     let hex = '';
     
@@ -35,7 +32,6 @@ function rgb(r, g, b){
   }
 
 // Sum of Odd Cubed Numbers
-
 function cubeOdd(arr) {
 
     const answer = arr.filter(x => x % 2 !== 0)
@@ -47,4 +43,16 @@ function cubeOdd(arr) {
     } else {
     return answer;
     }
+  }
+
+// Check three and two
+function checkThreeAndTwo(array) {
+    let count = {};
+    
+    for(let i =0; i < array.length; i++) {
+      let instance = array[i];
+      count[instance] = count[instance] ? count[instance] + 1 : 1;
+    }
+    const arr = Object.values(count);
+    return arr.includes(2) && arr.includes(3) ? true : false;
   }
