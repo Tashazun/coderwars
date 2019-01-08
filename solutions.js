@@ -56,3 +56,16 @@ function checkThreeAndTwo(array) {
     const arr = Object.values(count);
     return arr.includes(2) && arr.includes(3) ? true : false;
   }
+
+// Object Oriented Piracy
+
+function Ship(draft,crew) {
+    this.draft = draft;
+    this.crew = crew;
+   }
+   
+   Ship.prototype.isWorthIt = function () {
+     const weight = (this.crew * 1.5);
+     const finalDraft = this.draft - weight;
+     return (finalDraft > 20 ? true : false);
+   };
